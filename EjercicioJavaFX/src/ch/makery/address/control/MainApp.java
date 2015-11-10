@@ -3,6 +3,7 @@ package ch.makery.address.control;
 import java.io.IOException;
 
 import ch.makery.address.model.Person;
+import ch.makery.address.view.PersonOverviewController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -82,15 +83,23 @@ public class MainApp extends Application {
     /**
      * Shows the person overview inside the root layout.
      */
+    /**
+     * Shows the person overview inside the root layout.
+     */
     public void showPersonOverview() {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("../view/PersonOverview.fxml"));
+            loader.setLocation(MainApp.class.getResource("view/PersonOverview.fxml"));
             AnchorPane personOverview = (AnchorPane) loader.load();
 
             // Set person overview into the center of root layout.
             rootLayout.setCenter(personOverview);
+
+            // Give the controller access to the main app.
+            PersonOverviewController controller = loader.getController();
+            controller.setMainApp(this);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
