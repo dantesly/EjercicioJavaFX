@@ -110,6 +110,21 @@
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
 }
 
+.MyButton:hover {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-background-image:url(../../../../../resources/images/fallout_1_icon_new.jpg); 
+    -fx-background-repeat:no-repeat; 
+}
+
+
 .button:hover {
     -fx-background-color: #3a3a3a;
 }
