@@ -2,6 +2,8 @@ package ch.makery.address.model;
 
 import java.time.LocalDate;
 
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -9,11 +11,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-/**
- * Model class for a Person.
- *
- * @author Marco Jakob
- */
+
 public class Person {
 
     private final StringProperty firstName;
@@ -107,8 +105,9 @@ public class Person {
         return city;
     }
 
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     public LocalDate getBirthday() {
-        return birthday.get();
+            return birthday.get();
     }
 
     public void setBirthday(LocalDate birthday) {
