@@ -13,25 +13,38 @@ import org.controlsfx.dialog.Dialogs;
 import ch.makery.address.model.Person;
 import ch.makery.address.model.PersonListWrapper;
 import ch.makery.address.view.BirthdayStatisticsController;
+import ch.makery.address.view.LoginController;
 import ch.makery.address.view.PersonEditDialogController;
 import ch.makery.address.view.PersonOverviewController;
 import ch.makery.address.view.RootLayoutController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 
 public class MainApp extends Application {
-
 	private Stage primaryStage;
 	private BorderPane rootLayout;
-	
+		
 	/**
 	 * The data as an observable list of Persons.
 	 */
@@ -53,16 +66,18 @@ public class MainApp extends Application {
 		personData.add(new Person("Martin", "Mueller"));
 	}
 	
+	
+	
 	//este método es el principal y es el que carga la app y todas sus ventanas
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage){
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("AddressApp");	
 		this.primaryStage.getIcons().add(new Image("file:resources/images/1447725822_Address_Book.png"));
-		
-		initRootLayout();		
-		showPersonOverview();		
+		initRootLayout();
+		showPersonOverview();
 	}
+	
 	
 	/**
 	 * Initializes the root layout and tries to load the last opened
@@ -70,6 +85,7 @@ public class MainApp extends Application {
 	 */
 	public void initRootLayout(){
 		try{
+			Login.t2.stop();
 			//Load root layout from fxml file. (el root layout es donde se encuentran los botones de file, etc y dentro es donde se
 			//cargará la escena que queremos mostrar)
 			FXMLLoader loader = new FXMLLoader();
@@ -172,7 +188,9 @@ public class MainApp extends Application {
 	}
 
 	public static void main(String[] args) {
+		
 		launch(args);
+		
 	}
 	
 	/**
@@ -297,5 +315,5 @@ public class MainApp extends Application {
 		}catch(IOException e){
 			e.printStackTrace();
 		}
-	}
+	}	
 }

@@ -38,7 +38,7 @@
       </GridPane>
       <HBox layoutX="197.1875" layoutY="241.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
       	<children>
-	      <Button defaultButton="true" layoutX="213.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="33.0" prefWidth="93.0" styleClass="MyButton" text="OK" />
+	      <Button layoutX="213.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="33.0" prefWidth="93.0" text="OK" />
 	      <Button layoutX="304.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="33.0" prefWidth="93.0" text="Cancel" />
 	    </children>
       </HBox>
