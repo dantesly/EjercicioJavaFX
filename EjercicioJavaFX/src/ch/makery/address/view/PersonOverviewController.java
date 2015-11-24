@@ -18,6 +18,8 @@ public class PersonOverviewController {
     private TableColumn<Person, String> firstNameColumn;
     @FXML
     private TableColumn<Person, String> lastNameColumn;
+    @FXML
+    private TableColumn<Person, String> streetColumn;
 
     @FXML
     private Label firstNameLabel;
