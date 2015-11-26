@@ -9,12 +9,18 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.util.Duration;
 
 public class LoadingController {
+	
+	@FXML
+	private Label labelLoad;
+	
 	@FXML
 	private ProgressBar loadBar;
 
@@ -33,7 +39,7 @@ public class LoadingController {
 	}
 
 	public void loadScreen() {
-
+		labelLoad.setText("Loading...Please Wait");
 		KeyFrame frame1 = new KeyFrame(Duration.ZERO, new KeyValue(loadBar.progressProperty(), 0));
 
 		KeyFrame frame2 = new KeyFrame(Duration.seconds(10), new KeyValue(loadBar.progressProperty(), 1));
@@ -45,6 +51,8 @@ public class LoadingController {
 		    public void handle(ActionEvent event) {
 		    	loadBar.setVisible(false);
 				btnLoad.setVisible(true);
+				labelLoad.setText("¡Listo!");
+				labelLoad.setContentDisplay(ContentDisplay.CENTER);
 		    }
 		});
 	}
