@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="173.0" maxWidth="247.0" minHeight="97.0" minWidth="247.0" prefHeight="97.0" prefWidth="247.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.LoadingController">
+   <children>
+      <Pane maxHeight="104.0" maxWidth="247.0" minHeight="104.0" minWidth="247.0" prefHeight="104.0" prefWidth="247.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ProgressBar fx:id="loadBar" blendMode="GREEN" layoutX="24.0" layoutY="52.0" prefWidth="200.0" progress="0.0" />
+            <Label fx:id="labelLoad" alignment="CENTER" contentDisplay="CENTER" layoutX="53.0" layoutY="14.0" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Loading...Please Wait" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+            <Button fx:id="btnLoad" layoutX="72.0" layoutY="45.0" mnemonicParsing="false" onAction="#onClickLoad" text="Continuar" visible="false" />
+         </children>
+         <styleClass>
+            <String fx:value="MyBackground" />
+            <String fx:value="border" />
+         </styleClass>
+      </Pane>
+   </children>
+</AnchorPane>

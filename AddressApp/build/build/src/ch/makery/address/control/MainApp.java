@@ -85,6 +85,7 @@ public class MainApp extends Application {
 	 */
 	public void initRootLayout(){
 		try{
+			Login.t2.stop();
 			//Load root layout from fxml file. (el root layout es donde se encuentran los botones de file, etc y dentro es donde se
 			//cargará la escena que queremos mostrar)
 			FXMLLoader loader = new FXMLLoader();

@@ -12,8 +12,8 @@
          <children>
             <Label layoutX="90.0" layoutY="67.0" text="Usuario" />
             <Label layoutX="85.0" layoutY="145.0" text="Password" />
-            <TextField fx:id="txtUsuario" layoutX="14.0" layoutY="99.0" />
-            <PasswordField fx:id="txtPassw" layoutX="14.0" layoutY="179.0" />
+            <TextField fx:id="txtUsuario" layoutX="14.0" layoutY="99.0" styleClass="MyText-field" />
+            <PasswordField fx:id="txtPassw" layoutX="14.0" layoutY="179.0" styleClass="MyText-field" />
             <Button fx:id="btnEntrar" layoutX="71.0" layoutY="236.0" mnemonicParsing="false" onAction="#onClickEntrar" text="Entrar" />
             <Label layoutX="48.0" layoutY="28.0" text="Introduzca los Datos" />
          </children>

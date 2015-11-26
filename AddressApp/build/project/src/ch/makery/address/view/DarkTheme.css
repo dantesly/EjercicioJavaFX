@@ -6,6 +6,11 @@
     -fx-background-color: #093B06;
 }
 
+.MyBackground{
+	-fx-background-color: #093B06;
+	-fx-border-color: #18FA1C;
+	}
+
 .label {
     -fx-font-size: 11pt;
     -fx-font-family: "Segoe UI Semibold";
@@ -108,10 +113,11 @@
     }
 .MyText-field{
 	-fx-background-color: #093B06;
+	-fx-border-color:#18FA1C;
 	-fx-font-size: 12pt;
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: #18FA1C;
-    -fx-border-fill:#18FA1C;
+    
     }
 /* 
  * Metro style Push Button

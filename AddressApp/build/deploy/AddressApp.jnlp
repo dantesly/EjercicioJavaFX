@@ -8,9 +8,10 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="AddressApp.jar" size="21991" download="eager" />
+    <jar href="AddressApp.jar" size="26849" download="eager" />
     <jar href="libs\controlsfx-8.0.6_20.jar" size="856539" download="eager" />
+    <jar href="libs\jl1.0.1.jar" size="105363" download="eager" />
   </resources>
-  <jfx:javafx-desc  width="0" height="0" main-class="ch.makery.address.control.Login.class"  name="AddressApp" />
+  <jfx:javafx-desc  width="0" height="0" main-class="ch.makery.address.control.Login"  name="AddressApp" />
   <update check="background"/>
 </jnlp>

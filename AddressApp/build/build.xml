@@ -21,6 +21,11 @@
 	
 		<copy todir="externalLibs">
 			<fileset dir="C:\Users\Borja Prieto 01\git\EjercicioJavaFX\AddressApp\lib">
+				<filename name="jl1.0.1.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Borja Prieto 01\git\EjercicioJavaFX\AddressApp\lib">
 				<filename name="controlsfx-8.0.6_20.jar"/>
 			</fileset>
 		</copy>
@@ -43,6 +48,7 @@
 		<!-- Copy project-libs references -->
 		<copy todir="build/libs">
 			<fileset dir="externalLibs">
+				<include name="jl1.0.1.jar"/>
 				<include name="controlsfx-8.0.6_20.jar"/>
 			</fileset>
 		</copy>
@@ -94,7 +100,7 @@
 	
 		<fx:application id="fxApplication"
 			name="AddressApp"
-			mainClass="ch.makery.address.control.Login.class"
+			mainClass="ch.makery.address.control.Login"
 		/>
 	
 		<mkdir dir="build/classes/META-INF" />
