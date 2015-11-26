@@ -18,8 +18,8 @@ public class LoadingController {
 	@FXML
 	private ProgressBar loadBar;
 
-	@FXML
-	private Button btnLoad;
+//	@FXML
+//	private Button btnLoad;
 	
 	private Loading loading;
 
@@ -36,24 +36,27 @@ public class LoadingController {
 
 		KeyFrame frame1 = new KeyFrame(Duration.ZERO, new KeyValue(loadBar.progressProperty(), 0));
 
-		KeyFrame frame2 = new KeyFrame(Duration.seconds(3), new KeyValue(loadBar.progressProperty(), 1));
+		KeyFrame frame2 = new KeyFrame(Duration.seconds(10), new KeyValue(loadBar.progressProperty(), 1));
 		Timeline task = new Timeline(frame1, frame2);
 		task.play();
 		task.setOnFinished(new EventHandler<ActionEvent>() {
 
 		    @Override
 		    public void handle(ActionEvent event) {
-		    	loadBar.setVisible(false);
-				btnLoad.setVisible(true);
+//		    	loadBar.setVisible(false);
+//				btnLoad.setVisible(true);
+		    	new MainApp().start(new Stage());
+				stage = loadBar.getScene().getWindow();
+				stage.hide();
 		    }
 		});
 	}
-	@FXML
-	public void onClickLoad(){
-		new MainApp().start(new Stage());
-		stage = loadBar.getScene().getWindow();
-		stage.hide();
-	}
+//	@FXML
+//	public void onClickLoad(){
+//		new MainApp().start(new Stage());
+//		stage = loadBar.getScene().getWindow();
+//		stage.hide();
+//	}
 
 	public void setLoadIn(Loading load) {
 		// TODO Auto-generated method stub
