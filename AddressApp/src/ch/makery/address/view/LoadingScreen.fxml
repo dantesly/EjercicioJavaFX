@@ -11,7 +11,7 @@
          <children>
             <ProgressBar fx:id="loadBar" blendMode="GREEN" layoutX="24.0" layoutY="52.0" prefWidth="200.0" progress="0.0" />
             <Label layoutX="53.0" layoutY="14.0" text="Loading...Please Wait" />
-            <Button fx:id="btnLoad" layoutX="68.0" layoutY="45.0" mnemonicParsing="false" text="Continuar" visible="false" />
+            <Button fx:id="btnLoad" layoutX="68.0" layoutY="45.0" mnemonicParsing="false" onAction="#onClickLoad" text="Continuar" visible="false" />
          </children>
          <styleClass>
             <String fx:value="MyBackground" />

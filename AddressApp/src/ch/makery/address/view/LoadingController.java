@@ -18,8 +18,8 @@ public class LoadingController {
 	@FXML
 	private ProgressBar loadBar;
 
-//	@FXML
-//	private Button btnLoad;
+	@FXML
+	private Button btnLoad;
 	
 	private Loading loading;
 
@@ -43,20 +43,17 @@ public class LoadingController {
 
 		    @Override
 		    public void handle(ActionEvent event) {
-//		    	loadBar.setVisible(false);
-//				btnLoad.setVisible(true);
-		    	new MainApp().start(new Stage());
-				stage = loadBar.getScene().getWindow();
-				stage.hide();
+		    	loadBar.setVisible(false);
+				btnLoad.setVisible(true);
 		    }
 		});
 	}
-//	@FXML
-//	public void onClickLoad(){
-//		new MainApp().start(new Stage());
-//		stage = loadBar.getScene().getWindow();
-//		stage.hide();
-//	}
+	@FXML
+	public void onClickLoad(){
+		new MainApp().start(new Stage());
+		stage = loadBar.getScene().getWindow();
+		stage.hide();
+	}
 
 	public void setLoadIn(Loading load) {
 		// TODO Auto-generated method stub
