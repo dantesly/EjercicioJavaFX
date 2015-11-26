@@ -1,5 +1,8 @@
 package ch.makery.address.view;
 
+import java.io.IOException;
+
+import ch.makery.address.control.Loading;
 import ch.makery.address.control.Login;
 import ch.makery.address.control.MainApp;
 import javafx.fxml.FXML;
@@ -27,14 +30,15 @@ public class LoginController extends Thread{
 	}
 	
 	@FXML
-	public void onClickEntrar(){
+	public void onClickEntrar() throws IOException{
 		if(verificarDatos()){
-			new MainApp().start(new Stage());
+			
+			new Loading().start(new Stage());
 			stage = txtUsuario.getScene().getWindow();
 			stage.hide();
 		}
 	}
-	
+
 	public boolean verificarDatos(){
 		if(txtUsuario.getText().equalsIgnoreCase("Borja") && txtPassw.getText().equals("1234")){
 			return true;
