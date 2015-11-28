@@ -8,10 +8,17 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+<<<<<<< HEAD
     <jar href="AddressApp.jar" size="26849" download="eager" />
     <jar href="libs\controlsfx-8.0.6_20.jar" size="856539" download="eager" />
     <jar href="libs\jl1.0.1.jar" size="105363" download="eager" />
   </resources>
   <jfx:javafx-desc  width="0" height="0" main-class="ch.makery.address.control.Login"  name="AddressApp" />
+=======
+    <jar href="AddressApp.jar" size="19536" download="eager" />
+    <jar href="libs\controlsfx-8.0.6_20.jar" size="856539" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="ch.makery.address.control.MainApp"  name="AddressApp" />
+>>>>>>> refs/heads/borja01
   <update check="background"/>
 </jnlp>
