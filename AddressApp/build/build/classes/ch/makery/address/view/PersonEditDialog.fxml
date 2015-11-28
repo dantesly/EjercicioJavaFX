@@ -28,6 +28,19 @@
             <Label text="City" GridPane.rowIndex="3" />
             <Label text="Postal Code" GridPane.rowIndex="4" />
             <Label text="Birthday" GridPane.rowIndex="5" />
+<<<<<<< HEAD
+            <TextField fx:id="firstNameField" styleClass="background" GridPane.columnIndex="1" />
+            <TextField fx:id="lastNameField" styleClass="background" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="streetField" styleClass="background" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="cityField" styleClass="background" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="postalCodeField" styleClass="background" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="birthdayField" styleClass="background" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <HBox layoutX="197.1875" layoutY="241.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      	<children>
+	      <Button layoutX="213.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="33.0" prefWidth="93.0" text="OK" />
+=======
             <TextField fx:id="firstNameField" GridPane.columnIndex="1" />
             <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="streetField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -39,6 +52,7 @@
       <HBox layoutX="197.1875" layoutY="241.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
       	<children>
 	      <Button defaultButton="true" layoutX="213.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="33.0" prefWidth="93.0" text="OK" />
+>>>>>>> refs/heads/borja01
 	      <Button layoutX="304.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="33.0" prefWidth="93.0" text="Cancel" />
 	    </children>
       </HBox>
